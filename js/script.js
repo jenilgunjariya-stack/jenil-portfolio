@@ -209,14 +209,14 @@ resumeBtns.forEach(btn => {
         resumeContainer.innerHTML = `
             <div id="pdf-content" style="width: 750px; padding: 40px; background: #fff; color: #1a1a1a; font-family: 'Inter', Arial, sans-serif; line-height: 1.5; margin: auto;">
                 <!-- Header -->
-                <div style="display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 4px solid #d4af37; padding-bottom: 20px; margin-bottom: 25px;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 4px solid #ffa15e; padding-bottom: 20px; margin-bottom: 25px;">
                     <div>
                         <h1 style="margin: 0; font-family: 'Outfit', sans-serif; font-size: 36px; color: #000; text-transform: uppercase;">JENIL GUNJARIYA</h1>
-                        <p style="margin: 5px 0 8px 0; color: #d4af37; font-weight: 700; font-size: 18px; letter-spacing: 1px;">FULL STACK WEB DEVELOPER</p>
+                        <p style="margin: 5px 0 8px 0; color: #ffa15e; font-weight: 700; font-size: 18px; letter-spacing: 1px;">FULL STACK WEB DEVELOPER</p>
                         <div style="font-size: 13px; color: #333;">
-                            <p style="margin: 2px 0;"><strong>Location:</strong> Gujarat, India</p>
-                            <p style="margin: 2px 0;"><strong>Email:</strong> jenilgunjariya@gmail.com</p>
-                            <p style="margin: 2px 0;"><strong>Phone:</strong> +91 97274 08352</p>
+                            <p style="margin: 2px 0;"><strong>Location:</strong> <a href="https://maps.google.com/?q=Gujarat,+India" style="color: #333; text-decoration: none;">Gujarat, India</a></p>
+                            <p style="margin: 2px 0;"><strong>Email:</strong> <a href="mailto:jenilgunjariya@gmail.com" style="color: #333; text-decoration: none;">jenilgunjariya@gmail.com</a></p>
+                            <p style="margin: 2px 0;"><strong>Phone:</strong> <a href="tel:+919727408352" style="color: #333; text-decoration: none;">+91 97274 08352</a></p>
                         </div>
                     </div>
                     <img src="https://i.postimg.cc/C1thHZ3r/logo.jpg" style="width: 70px; height: 70px; border-radius: 5px; border: 1px solid #eee;">
@@ -224,7 +224,7 @@ resumeBtns.forEach(btn => {
 
                 <!-- Profile Summary -->
                 <div style="margin-bottom: 25px;">
-                    <h3 style="color: #d4af37; border-bottom: 2px solid #f0f0f0; padding-bottom: 5px; font-family: 'Outfit', sans-serif; text-transform: uppercase; font-size: 16px; margin-bottom: 10px;">Profile Summary</h3>
+                    <h3 style="color: #ffa15e; border-bottom: 2px solid #f0f0f0; padding-bottom: 5px; font-family: 'Outfit', sans-serif; text-transform: uppercase; font-size: 16px; margin-bottom: 10px;">Profile Summary</h3>
                     <p style="text-align: justify; font-size: 14px; color: #222;">
                         Passionate Full Stack Web Developer skilled in building responsive and scalable web applications. Experienced in developing real-world e-commerce platforms with modern technologies.
                     </p>
@@ -232,7 +232,7 @@ resumeBtns.forEach(btn => {
 
                 <!-- Technical Skills -->
                 <div style="margin-bottom: 25px;">
-                    <h3 style="color: #d4af37; border-bottom: 2px solid #f0f0f0; padding-bottom: 5px; font-family: 'Outfit', sans-serif; text-transform: uppercase; font-size: 16px; margin-bottom: 10px;">Technical Skills</h3>
+                    <h3 style="color: #ffa15e; border-bottom: 2px solid #f0f0f0; padding-bottom: 5px; font-family: 'Outfit', sans-serif; text-transform: uppercase; font-size: 16px; margin-bottom: 10px;">Technical Skills</h3>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 14px;">
                         <div><strong>Frontend:</strong> HTML, CSS, JavaScript, React</div>
                         <div><strong>Backend:</strong> Node.js, Express</div>
@@ -241,39 +241,26 @@ resumeBtns.forEach(btn => {
                     </div>
                 </div>
 
-                <!-- Professional Experience -->
+                <!-- Key Project -->
                 <div style="margin-bottom: 25px;">
-                    <h3 style="color: #d4af37; border-bottom: 2px solid #f0f0f0; padding-bottom: 5px; font-family: 'Outfit', sans-serif; text-transform: uppercase; font-size: 16px; margin-bottom: 10px;">Professional Experience</h3>
-                    
-                    <div style="margin-bottom: 15px;">
-                        <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                            <h4 style="margin: 0; font-size: 15px; color: #000;">Lead Developer & Founder</h4>
-                            <span style="font-size: 12px; color: #666; font-weight: 600;">2026 - Present</span>
-                        </div>
-                        <p style="margin: 2px 0; font-size: 13px; color: #d4af37; font-weight: 600;">V-WOOD QUARTZ (Wall Clock Business)</p>
+                    <h3 style="color: #ffa15e; border-bottom: 2px solid #f0f0f0; padding-bottom: 5px; font-family: 'Outfit', sans-serif; text-transform: uppercase; font-size: 16px; margin-bottom: 10px;">Key Project</h3>
+                    <div style="padding: 5px 0;">
+                        <h4 style="margin: 0; font-size: 15px; color: #000;">V-WOOD QUARTZ E-Commerce Website</h4>
                         <ul style="margin: 5px 0 0 0; padding-left: 20px; font-size: 13px; color: #333;">
-                            <li>Designed and developed a fully functional e-commerce website from scratch.</li>
-                            <li>Integrated Firebase/Firestore for real-time order synchronization.</li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                            <h4 style="margin: 0; font-size: 15px; color: #000;">Freelance Web Developer</h4>
-                            <span style="font-size: 12px; color: #666; font-weight: 600;">2024 - 2026</span>
-                        </div>
-                        <p style="margin: 2px 0; font-size: 13px; color: #d4af37; font-weight: 600;">Independent</p>
-                        <ul style="margin: 5px 0 0 0; padding-left: 20px; font-size: 13px; color: #333;">
-                            <li>Created responsive landing pages and portfolios for local businesses.</li>
+                            <li style="margin-bottom: 3px;">Developed full e-commerce platform from scratch.</li>
+                            <li style="margin-bottom: 3px;">Implemented secure user login & authentication.</li>
+                            <li style="margin-bottom: 3px;">Built a comprehensive Admin panel & order management system.</li>
+                            <li style="margin-bottom: 3px;">Integrated secure payment processing.</li>
+                            <li><strong>Live Link:</strong> <a href="https://v-wood.vercel.app/" style="color: #ffa15e; text-decoration: none;">https://v-wood.vercel.app/</a></li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Education -->
                 <div style="margin-bottom: 25px;">
-                    <h3 style="color: #d4af37; border-bottom: 2px solid #f0f0f0; padding-bottom: 5px; font-family: 'Outfit', sans-serif; text-transform: uppercase; font-size: 16px; margin-bottom: 10px;">Education</h3>
+                    <h3 style="color: #ffa15e; border-bottom: 2px solid #f0f0f0; padding-bottom: 5px; font-family: 'Outfit', sans-serif; text-transform: uppercase; font-size: 16px; margin-bottom: 10px;">Education</h3>
                     <div>
-                        <h4 style="margin: 0; font-size: 15px; color: #d4af37;">MADHUBEN & BHANUBHAU PATEL INSTITUTE OF TECHNOLOGY (MBIT)</h4>
+                        <h4 style="margin: 0; font-size: 15px; color: #ffa15e;">MADHUBEN & BHANUBHAU PATEL INSTITUTE OF TECHNOLOGY (MBIT)</h4>
                         <p style="margin: 3px 0; font-size: 13px; color: #555;">NEW VALLABH VIDHYANAGR</p>
                         <p style="margin: 0; font-size: 14px; color: #000;"><strong>Course Name:</strong> B.TECH</p>
                     </div>
@@ -281,7 +268,7 @@ resumeBtns.forEach(btn => {
 
                 <!-- Achievements -->
                 <div style="margin-bottom: 25px;">
-                    <h3 style="color: #d4af37; border-bottom: 2px solid #f0f0f0; padding-bottom: 5px; font-family: 'Outfit', sans-serif; text-transform: uppercase; font-size: 16px; margin-bottom: 10px;">Achievements & Highlights</h3>
+                    <h3 style="color: #ffa15e; border-bottom: 2px solid #f0f0f0; padding-bottom: 5px; font-family: 'Outfit', sans-serif; text-transform: uppercase; font-size: 16px; margin-bottom: 10px;">Achievements & Highlights</h3>
                     <div style="font-size: 14px; color: #222;">
                         <p style="margin: 4px 0;">✔ Built real-world e-commerce website</p>
                         <p style="margin: 4px 0;">✔ Deployed live project</p>

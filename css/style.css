@@ -333,13 +333,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-badge {
     position: absolute;
-    background: #000000; /* Black box */
-    border: 1px solid var(--color-primary); /* Orange border for contrast */
-    color: #ffffff;
+    background: #000; /* Solid black box as requested */
+    border: 1px solid var(--border-color);
     padding: 0.6rem 1.2rem;
-    border-radius: 8px; /* Slightly more rectangular for 'box' feel */
+    border-radius: 4px; /* Sharper boxy look */
     font-size: 0.9rem;
     font-weight: 600;
+    color: var(--color-primary); /* Orange text on black */
     display: flex;
     align-items: center;
     gap: 0.5rem;
