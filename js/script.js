@@ -1,32 +1,4 @@
 // ==========================================================================
-//   Live Clock Functionality
-// ==========================================================================
-function updateClock() {
-    const clockElement = document.getElementById('live-clock');
-    if (!clockElement) return;
-
-    const now = new Date();
-    let hours = now.getHours();
-    let minutes = now.getMinutes();
-    let seconds = now.getSeconds();
-    
-    const ampm = hours >= 12 ? 'PM' : 'AM';
-    hours = hours % 12;
-    hours = hours ? hours : 12; // the hour '0' should be '12'
-    
-    // Format to HH:MM:SS AM/PM
-    hours = hours < 10 ? '0' + hours : hours;
-    minutes = minutes < 10 ? '0' + minutes : minutes;
-    seconds = seconds < 10 ? '0' + seconds : seconds;
-    
-    clockElement.textContent = `${hours}:${minutes}:${seconds} ${ampm}`;
-}
-
-// Update clock immediately, then every second
-updateClock();
-setInterval(updateClock, 1000);
-
-// ==========================================================================
 //   Mobile Navigation Toggle
 // ==========================================================================
 const hamburger = document.querySelector('.hamburger');
@@ -213,7 +185,7 @@ if (mobileInput) {
 // ==========================================================================
 //   Resume Download Functionality (High-Quality PDF Generation)
 // ==========================================================================
-const resumeBtns = document.querySelectorAll('#downloadResume, #downloadResumeBtn');
+const resumeBtns = document.querySelectorAll('#downloadResume, #downloadResumeBtn, #downloadResumeHero');
 
 resumeBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
@@ -269,17 +241,30 @@ resumeBtns.forEach(btn => {
                     </div>
                 </div>
 
-                <!-- Key Project -->
+                <!-- Professional Experience -->
                 <div style="margin-bottom: 25px;">
-                    <h3 style="color: #d4af37; border-bottom: 2px solid #f0f0f0; padding-bottom: 5px; font-family: 'Outfit', sans-serif; text-transform: uppercase; font-size: 16px; margin-bottom: 10px;">Key Project</h3>
-                    <div style="padding: 5px 0;">
-                        <h4 style="margin: 0; font-size: 15px; color: #000;">V-WOOD QUARTZ E-Commerce Website</h4>
+                    <h3 style="color: #d4af37; border-bottom: 2px solid #f0f0f0; padding-bottom: 5px; font-family: 'Outfit', sans-serif; text-transform: uppercase; font-size: 16px; margin-bottom: 10px;">Professional Experience</h3>
+                    
+                    <div style="margin-bottom: 15px;">
+                        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                            <h4 style="margin: 0; font-size: 15px; color: #000;">Lead Developer & Founder</h4>
+                            <span style="font-size: 12px; color: #666; font-weight: 600;">2026 - Present</span>
+                        </div>
+                        <p style="margin: 2px 0; font-size: 13px; color: #d4af37; font-weight: 600;">V-WOOD QUARTZ (Wall Clock Business)</p>
                         <ul style="margin: 5px 0 0 0; padding-left: 20px; font-size: 13px; color: #333;">
-                            <li style="margin-bottom: 3px;">Developed full e-commerce platform from scratch.</li>
-                            <li style="margin-bottom: 3px;">Implemented secure user login & authentication.</li>
-                            <li style="margin-bottom: 3px;">Built a comprehensive Admin panel & order management system.</li>
-                            <li style="margin-bottom: 3px;">Integrated secure payment processing.</li>
-                            <li><strong>Live Link:</strong> https://v-wood.vercel.app/</li>
+                            <li>Designed and developed a fully functional e-commerce website from scratch.</li>
+                            <li>Integrated Firebase/Firestore for real-time order synchronization.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                            <h4 style="margin: 0; font-size: 15px; color: #000;">Freelance Web Developer</h4>
+                            <span style="font-size: 12px; color: #666; font-weight: 600;">2024 - 2026</span>
+                        </div>
+                        <p style="margin: 2px 0; font-size: 13px; color: #d4af37; font-weight: 600;">Independent</p>
+                        <ul style="margin: 5px 0 0 0; padding-left: 20px; font-size: 13px; color: #333;">
+                            <li>Created responsive landing pages and portfolios for local businesses.</li>
                         </ul>
                     </div>
                 </div>
