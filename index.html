@@ -19,6 +19,14 @@
     
     <!-- html2pdf.js library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    
+    <!-- EmailJS library -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("Vn_nb7Zgh8hkCnVGo"); 
+        })();
+    </script>
 </head>
 <body>
 
@@ -45,7 +53,7 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#" class="admin-login-trigger" style="color: var(--color-primary);"><i class="fa-solid fa-lock" style="font-size: 0.8rem;"></i> Admin</a></li>
+
             </ul>
             
             <a href="#" class="btn btn-outline nav-btn" id="downloadResume">Resume</a>
@@ -337,7 +345,7 @@
                     </div>
                     
                     <div class="social-links">
-                        <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.linkedin.com/in/jenil-gunjariya-74913334a?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
                         <a href="https://github.com/jenilgunjariya-stack" target="_blank" class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
                         <a href="https://www.instagram.com/jenil_gunjariya" target="_blank" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                     </div>
@@ -350,6 +358,9 @@
                 <form class="contact-form fade-up" id="contactForm">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_template" value="table">
+                    <input type="text" name="_honey" style="display:none">
+                    <input type="hidden" name="_subject" value="New Portfolio Message!">
+
                     <div class="input-group">
                         <input type="text" id="name" name="name" required placeholder="Your Name">
                     </div>
@@ -357,7 +368,7 @@
                         <input type="email" id="email" name="email" required placeholder="Your Email">
                     </div>
                     <div class="input-group">
-                        <input type="tel" id="mobile" name="mobile" required placeholder="Your 10-Digit Mobile No." pattern="[0-9]{10}" maxlength="10" title="Please enter exactly 10 digits">
+                        <input type="tel" id="mobile" name="mobile" required placeholder="Your 10-Digit Mobile No." pattern="[0-9]{10}" maxlength="10" title="Please enter exactly 10 digits" inputmode="numeric">
                     </div>
                     <div class="input-group">
                         <input type="text" id="subject" name="_subject" required placeholder="Subject">
@@ -365,6 +376,7 @@
                     <div class="input-group">
                         <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
                     </div>
+                    <div id="formStatus" class="form-status"></div>
                     <button type="submit" class="btn btn-primary submit-btn">
                         Send Message <i class="fa-solid fa-paper-plane"></i>
                     </button>
@@ -378,7 +390,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo"><img src="https://i.postimg.cc/C1thHZ3r/logo.jpg" alt="JG Logo" class="logo-img"></div>
-                <p>&copy; 2026 Jenil Gunjariya. All Rights Reserved. | <a href="#" class="admin-login-trigger" style="color: var(--text-muted); transition: var(--transition);">Admin Login</a></p>
+                <p>&copy; 2026 Jenil Gunjariya. All Rights Reserved.</p>
             </div>
         </div>
     </footer>

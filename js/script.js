@@ -118,13 +118,34 @@ if (contactForm) {
         const fullMobile = "+91 " + mobile;
         formData.set('mobile', fullMobile);
         
-        fetch("https://formsubmit.co/ajax/jenilgunjariya@gmail.com", {
-            method: "POST",
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
+        const formStatus = document.getElementById('formStatus');
+        
+        // Hide previous status
+        if (formStatus) {
+            formStatus.style.display = 'none';
+            formStatus.className = 'form-status';
+        }
+
+        // Explicitly set reply-to and subject
+        formData.append('_replyto', formData.get('email'));
+
+        const emailData = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            mobile: fullMobile,
+            subject: formData.get('_subject'),
+            message: formData.get('message'),
+            reply_to: formData.get('email')
+        };
+
+        // Send both Main Notification and Auto Reply
+        Promise.all([
+            emailjs.send("service_pec7r8z", "template_idq1aig", emailData),
+            emailjs.send("service_pec7r8z", "template_mtcx8pn", emailData)
+        ])
+        .then((responses) => {
+            // Check if both were successful
+            if (responses.every(res => res.status === 200)) {
                 // Save to localStorage for Admin Panel
                 const newMessage = {
                     id: Date.now(),
@@ -137,18 +158,26 @@ if (contactForm) {
                 };
                 
                 let savedMessages = JSON.parse(localStorage.getItem('portfolio_messages')) || [];
-                savedMessages.unshift(newMessage); // Add to beginning
+                savedMessages.unshift(newMessage);
                 localStorage.setItem('portfolio_messages', JSON.stringify(savedMessages));
 
-                alert('Thank you! Your message has been sent successfully.');
+                if (formStatus) {
+                    formStatus.textContent = 'Your message has been sent successfully';
+                    formStatus.classList.add('success');
+                    formStatus.style.display = 'block';
+                }
                 contactForm.reset();
             } else {
-                alert('Oops! Something went wrong. Please try again.');
+                throw new Error('One or more emails failed to send');
             }
         })
         .catch(error => {
             console.error('Error:', error);
-            alert('Oops! Something went wrong. Please check your connection and try again.');
+            if (formStatus) {
+                formStatus.textContent = 'Something went wrong. Please check your connection.';
+                formStatus.classList.add('error');
+                formStatus.style.display = 'block';
+            }
         })
         .finally(() => {
             submitBtn.innerHTML = originalBtnText;
@@ -157,22 +186,7 @@ if (contactForm) {
     });
 }
 
-// ==========================================================================
-//   Admin Login Logic
-// ==========================================================================
-const adminLoginTriggers = document.querySelectorAll('.admin-login-trigger');
-adminLoginTriggers.forEach(trigger => {
-    trigger.addEventListener('click', (e) => {
-        e.preventDefault();
-        const pwd = prompt("Enter Admin Password:");
-        if (pwd === "261106") {
-            sessionStorage.setItem('isAdmin', 'true');
-            window.location.href = "admin.html";
-        } else if (pwd !== null) {
-            alert("Incorrect Password!");
-        }
-    });
-});
+
 
 // Only allow digits in the mobile input
 const mobileInput = document.getElementById('mobile');

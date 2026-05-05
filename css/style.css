@@ -900,6 +900,30 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 0 20px rgba(255, 161, 94, 0.15);
 }
 
+.form-status {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    text-align: center;
+    display: none;
+    transition: var(--transition);
+}
+
+.form-status.success {
+    display: block;
+    background: rgba(22, 163, 74, 0.1);
+    color: #4ade80;
+    border: 1px solid rgba(22, 163, 74, 0.2);
+}
+
+.form-status.error {
+    display: block;
+    background: rgba(220, 38, 38, 0.1);
+    color: #f87171;
+    border: 1px solid rgba(220, 38, 38, 0.2);
+}
+
 .submit-btn {
     width: 100%;
     display: flex;
